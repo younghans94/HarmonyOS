@@ -1,3 +1,5 @@
+import { router } from '@kit.ArkUI';
+
 @Entry
 @Component
 struct Index {
@@ -14,7 +16,9 @@ struct Index {
           middle: { anchor: '__container__', align: HorizontalAlign.Center }
         })
         .onClick(() => {
-          this.message = 'Welcome';
+          router.pushUrl({
+            url: 'pages/Container'
+          })
         })
     }
     .height('100%')

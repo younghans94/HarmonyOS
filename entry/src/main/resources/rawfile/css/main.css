@@ -1,0 +1,16 @@
+/* Common Style */
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #f1f3f5;
+}
+
+/* Container Style */
+html {
+    font-size: 1.08px;
+}
+
+/* Container Style */
+.container {
+    position: relative;
+}

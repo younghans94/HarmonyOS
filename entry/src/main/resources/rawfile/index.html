@@ -1,0 +1,26 @@
+<!-- MainPage.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testApp</title>
+</head>
+
+<body>
+<div class="container">
+    <button id="sendBtn">send message</button>
+</div>
+<div class="output">
+    output
+</div>
+<div id="popup" style="display:none;position:fixed;top:50%;left:50%;
+    transform:translate(-50%,-50%);background:#fff;padding:20px;
+    box-shadow:0 4px 12px rgba(0,0,0,.3);border-radius:8px;z-index:999;">
+    <p id="popupMsg"></p>
+    <button id="popupClose">关闭</button>
+</div>
+<script src="./js/mainPage.js" defer></script>
+</body>
+</html>
