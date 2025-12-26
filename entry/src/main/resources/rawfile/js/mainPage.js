@@ -8,9 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 var h5Port;
 var output = document.querySelector('.output');
 window.addEventListener('message', function (event) {
-  showPopup(0);
   if (event.data == '__init_port__') {
-    showPopup(1);
     if (event.ports[0] != null) {
       h5Port = event.ports[0];
       showPopup(event.ports[0]);// 1. 保存从ets侧发送过来的端口

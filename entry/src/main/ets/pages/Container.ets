@@ -9,7 +9,6 @@ struct Container {
   ports: webview.WebMessagePort[] = [];
 
   aboutToAppear(): void {
-
   }
 
   aboutToReuse(params: Record<string, Object | null | undefined>): void {
@@ -48,9 +47,6 @@ struct Container {
         src: $rawfile("index.html"),
         controller: this.controller
       })
-        .onControllerAttached(() => {
-
-        })
         .onPageEnd(() => {
           try {
             // 1、创建两个消息端口。

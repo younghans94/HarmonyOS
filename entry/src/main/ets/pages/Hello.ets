@@ -2,13 +2,12 @@
 @Component
 
 struct Hello {
-  @State message: string = 'Hello World';
+  @State message: string = 'Hello World'
   @State wrap: FlexWrap = FlexWrap.NoWrap
 
   build() {
     // 使用 Column 作为根容器，Flex 容器
-    Flex({ wrap: this.wrap })
-    {
+    Flex({ wrap: this.wrap }) {
       Button("switch wrap")
         .onClick(() => {
           this.wrap = FlexWrap.Wrap
