@@ -10,8 +10,7 @@ var output = document.querySelector('.output');
 window.addEventListener('message', function (event) {
   if (event.data == '__init_port__') {
     if (event.ports[0] != null) {
-      h5Port = event.ports[0];
-      showPopup(event.ports[0]);// 1. 保存从ets侧发送过来的端口
+      h5Port = event.ports[0];/ 1. 保存从ets侧发送过来的端口
       h5Port.onmessage = function (event) {
         // 2. 接收ets侧发送过来的消息.
         var msg = 'Got message from ets:';

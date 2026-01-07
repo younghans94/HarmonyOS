@@ -11,7 +11,11 @@ struct Container {
   uiContext: UIContext = this.getUIContext();
 
   aboutToAppear(): void {
-    webview.WebviewController.setWebDebuggingAccess(true);
+    try {
+      webview.WebviewController.setWebDebuggingAccess(true);
+    } catch (error) {
+      // TODO: Implement error handling.
+    }
     let atManager = abilityAccessCtrl.createAtManager();
     atManager.requestPermissionsFromUser(this.uiContext.getHostContext(),
       ['ohos.permission.CAMERA', 'ohos.permission.MICROPHONE'])

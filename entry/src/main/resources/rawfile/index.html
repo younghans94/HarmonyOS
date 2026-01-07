@@ -20,6 +20,18 @@
 <script>
     let photo = document.getElementById("photo");
     photo.addEventListener("change", preViewImg)
+<!--    function preViewImg(event) {-->
+<!--    const file = event.target.files?.[0]-->
+<!--    if (!file) return-->
+
+<!--    const img = document.getElementById("img")-->
+<!--    console.log(file)-->
+<!--    img.src = URL.createObjectURL(file)-->
+<!--    img.onload = () => {-->
+<!--        document.getElementById("image_preview").style.display = 'block'-->
+<!--        URL.revokeObjectURL(img.src) // 避免内存泄漏-->
+<!--    }-->
+<!--}-->
     function preViewImg(event) {
         let fileReader = new FileReader();
         let img = document.getElementById("img");
