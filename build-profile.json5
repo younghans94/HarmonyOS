@@ -1,6 +1,20 @@
 {
   "app": {
-    "signingConfigs": [],
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "/Users/younghan/.ohos/config/default_HarmonyOS_iCwNMlLWgM4hKsSuD01ZOtY26LOmx-ugTvpBXMV_lUA=.cer",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001B51B4AB78876BF4615CB1A6CE0DCF0210ABB2712ABA2BCFC8CBE9852536E1DB69C6C572508683C2",
+          "profile": "/Users/younghan/.ohos/config/default_HarmonyOS_iCwNMlLWgM4hKsSuD01ZOtY26LOmx-ugTvpBXMV_lUA=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "/Users/younghan/.ohos/config/default_HarmonyOS_iCwNMlLWgM4hKsSuD01ZOtY26LOmx-ugTvpBXMV_lUA=.p12",
+          "storePassword": "0000001BAA9FACFE2CF2782B92E755D5849C9C15C50A5E97CEF3EBFBA7CB416425C9F3BD77F0A9C4060ABB"
+        }
+      }
+    ],
     "products": [
       {
         "name": "default",

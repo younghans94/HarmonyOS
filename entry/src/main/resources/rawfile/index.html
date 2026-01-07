@@ -15,6 +15,31 @@
 <div class="output">
     output
 </div>
+<input type="file" name="photo" id="photo"><br>
+<img src="" style="display: none;width:200px;" id="img">
+<script>
+    let photo = document.getElementById("photo");
+    photo.addEventListener("change", preViewImg)
+    function preViewImg(event) {
+        let fileReader = new FileReader();
+        let img = document.getElementById("img");
+        fileReader.addEventListener(
+            "load",
+            () => {
+                // 将图像文件转换为 Base64 字符串
+                img.src = fileReader.result;
+                img.style.display = "block";
+            },
+            false
+        );
+        if (event.target.files && event.target.files[0]) {
+          fileReader.readAsDataURL(event.target.files[0]);
+        } else {
+          console.error("File not exist.");
+        }
+    }
+</script>
+<p id="image_preview">图片预览</p>
 <div id="popup" style="display:none;position:fixed;top:50%;left:50%;
     transform:translate(-50%,-50%);background:#fff;padding:20px;
     box-shadow:0 4px 12px rgba(0,0,0,.3);border-radius:8px;z-index:999;">
